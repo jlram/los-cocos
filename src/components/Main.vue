@@ -47,7 +47,9 @@
               <h2 class="subheader-ticket">Total</h2>
             </v-col>
             <v-col cols="3" offset="6">
-              <h2 class="subheader-ticket">€{{ booking.room.price }}</h2>
+              <h2 class="subheader-ticket">€
+                {{ (booking.room.price * booking.adults) + (booking.room.price * booking.children * 0.5) }}
+                </h2>
             </v-col>
           </v-row>
           <v-row>
