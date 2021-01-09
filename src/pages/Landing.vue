@@ -1,20 +1,23 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
+    <Banner />
   </div>
 </template>
 
 <script>
-import Navbar from '@/components/Navbar.vue'
+import Navbar from "@/components/Navbar.vue";
+import Banner from "@/components/Banner.vue";
 export default {
-  name: 'Landing',
+  name: "Landing",
   props: {
-    msg: String
+    msg: String,
   },
   components: {
-    Navbar
-  }
-}
+    Navbar,
+    Banner,
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

@@ -1,20 +1,20 @@
 <template>
-  <div id="app">
-    <Landing/>
-  </div>
+  <v-app id="app">
+    <Landing />
+  </v-app>
 </template>
 
 <script>
-import Landing from './pages/Landing.vue'
+import Landing from "./pages/Landing.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    Landing
-  }
-}
+    Landing,
+  },
+};
 </script>
 
 <style>
-@import './assets/css/main.css';
+@import "./assets/css/main.css";
 </style>
