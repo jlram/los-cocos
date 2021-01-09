@@ -20,7 +20,7 @@ const store = new Vuex.Store({
         size: '',
         beds: '',
         adults: '',
-        price: ''
+        price: 0
       }
     }
   },
