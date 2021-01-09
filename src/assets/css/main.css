@@ -262,6 +262,16 @@ h3 {
     z-index: 0;
 }
 
+.info-room {
+    position: absolute;
+    bottom: 5px;
+}
+
+.double-bed {
+    position: absolute;
+    bottom: 80px;
+}
+
 .coco-straw {
     position: relative;
     top: 12px;
@@ -286,6 +296,15 @@ h3 {
     .img-card {
         width: 100%;
         right: 0;
+    }
+
+    .info-room {
+        position: relative;
+    }
+
+    .double-bed {
+        position: absolute;
+        bottom: 20px;
     }
 }
 

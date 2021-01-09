@@ -17,8 +17,6 @@ const store = new Vuex.Store({
       room: {
         name: '',
         description: '',
-        size: '',
-        beds: '',
         adults: '',
         price: 0
       }
@@ -29,14 +27,28 @@ const store = new Vuex.Store({
       for (var item in booking) {
         state.booking[item] = booking[item]
       }
+    },
+    save (state) {
+      console.log(state.booking)
+      localStorage.setItem('booking', JSON.stringify(state.booking))
+    },
+    readStorage (state) {
+      if (localStorage.getItem('booking')) {
+        state.booking = JSON.parse(localStorage.getItem('booking'))
+      }
     }
   },
   actions: {
     update (context, booking) {
       context.commit('update', booking)
+    },
+    save (context) {
+      context.commit('save')
     }
   }
 })
+
+store.commit('readStorage')
 
 new Vue({
   vuetify,

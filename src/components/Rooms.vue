@@ -19,11 +19,14 @@
                 {{ room.description }}
               </p>
               <p>Size: {{ room.size }}m2</p>
-              <v-row>
-                <v-col cols="3"> Beds: {{ room.beds }} </v-col>
+              <v-row class="info-room col-lg-7">
+                <v-col cols="3">
+                  <img src="@/assets/images/double-bed.svg" alt="" class="double-bed">
+                  Beds: {{ room.beds }} 
+                </v-col>
                 <v-col cols="3"> People: {{ room.people }} </v-col>
                 <v-col cols="3" offset="3">
-                  <h1 class="header-ticket">€{{ room.price }}</h1>
+                  <h1 class="header-ticket" id="room-price">€{{ room.price }}</h1>
                 </v-col>
               </v-row>
             </v-col>
