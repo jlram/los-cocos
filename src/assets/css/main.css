@@ -1,0 +1,83 @@
+/* Navbar component */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+#app-bar {
+    box-shadow: none;
+    background-color: white;
+    position: fixed;
+}
+  
+#nav {
+    margin: auto;
+    text-align: center;
+    margin-right: 300px;
+    margin-left: 300px;
+    box-shadow: none;
+}
+
+#logo-title {
+    width: 130px;
+    height: 40px;
+    position: relative;
+    top: 20%;
+}
+
+.v-tab {
+    text-transform: none !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px !important;
+}
+
+.v-navigation-drawer, .v-overlay__scrim {
+    height: 100vh !important;
+}
+
+.v-app-bar__nav-icon, #logo-mobile {
+    display: none !important;
+}
+
+.v-item-group .v-list-item:first-child {
+    margin-top: 25px !important;
+}
+
+.first {
+    margin-top: 15px;
+}
+
+#drawer-image {
+    margin: 15px;
+}
+
+@media screen and (max-width: 1600px) {
+    #nav {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    #nav {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #nav {
+       display: none;
+    }
+
+    .v-app-bar__nav-icon, #logo-mobile {
+        display: block !important;
+    }
+
+    #logo-mobile {
+        margin: auto;
+        position: relative;
+        right: 25px;
+    }
+}
+
+/* Banner component */
