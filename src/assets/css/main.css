@@ -4,8 +4,8 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.send-back {
-    z-index: -1 !important;
+html, body {
+    overflow-x: hidden;
 }
 
 /* Navbar component */
@@ -78,12 +78,32 @@
     .v-app-bar__nav-icon, #logo-mobile {
         display: block !important;
     }
+}
 
+/* Drawer component */
+#drawer {
+    height: 30px;
+    position: relative;
+}
+
+#btn-drawer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+@media screen and (max-width: 1264px) {
     #logo-mobile {
         margin: auto;
         position: relative;
-        right: 25px;
+        right: 5px;
+        top: 20px;
     }
+}
+
+.v-list-item {
+    position: relative;
+    left: 10px;
 }
 
 /* Banner component */
