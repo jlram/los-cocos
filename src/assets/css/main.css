@@ -1,8 +1,14 @@
-/* Navbar component */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Quicksand:wght@600&display=swap');
+
 * {
     font-family: 'Roboto', sans-serif;
 }
 
+.send-back {
+    z-index: -1 !important;
+}
+
+/* Navbar component */
 #app-bar {
     box-shadow: none;
     background-color: white;
@@ -64,7 +70,7 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1264px) {
     #nav {
        display: none;
     }
@@ -81,3 +87,85 @@
 }
 
 /* Banner component */
+#banner {
+    position: relative;
+    top: 68px;
+    height: 200px;
+    width: 100vw;
+    margin-right: 0;
+    margin-left: 0;
+
+    background-image: url('../images/los-cocos-room-header-2-x.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#blue-row {
+    position: relative;
+    margin-top: 30px;
+    height: 65%;
+
+    background-color: rgba(23, 111, 184, 0.192);
+}
+
+.v-input, .button {
+    position: relative;
+    top: 15%;
+    font-family: 'Montserrat' !important;
+}
+
+.v-text-field__slot, .v-select__slot {
+    background-color: white;
+    border-radius: 3px;
+    height: 60px;
+
+    font-weight: 400;
+    color: black;
+    font-size: 16px;
+    padding-left: 5%;
+    font-family: 'Montserrat';
+}
+
+.v-select__slot {
+    padding-left: 0;
+    font-family: 'Montserrat';
+}
+
+.v-text-field__prefix {
+    font-family: 'Montserrat';
+}
+
+#button-col {
+    margin-left: -70px;
+}
+
+.button {
+    height: 60px !important;
+    min-width: 180px !important;
+}
+
+.v-btn__content {
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 600;
+    text-transform: none !important;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1264px) {
+    #banner {
+        height: 500px;
+    }
+
+    #blue-row {
+        height: 85%;
+    }
+
+    #button-col {
+        margin-left: 0;
+    }
+
+    .button {
+        min-width: 100% !important;
+    }
+}
