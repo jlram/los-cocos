@@ -10,14 +10,14 @@
                   ref="startMenu"
                   v-model="startMenu"
                   :close-on-content-click="false"
-                  :return-value.sync="startDate"
+                  :return-value.sync="options.startDate"
                   transition="scale-transition"
                   offset-y
                   min-width="auto"
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                      v-model="startDate"
+                      v-model="options.startDate"
                       readonly
                       v-bind="attrs"
                       v-on="on"
@@ -26,7 +26,7 @@
                       append-icon="mdi-calendar-blank"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="startDate" no-title scrollable>
+                  <v-date-picker v-model="options.startDate" no-title scrollable>
                     <v-spacer></v-spacer>
                     <v-btn text color="primary" @click="startMenu = false">
                       Cancel
@@ -34,7 +34,7 @@
                     <v-btn
                       text
                       color="primary"
-                      @click="$refs.startMenu.save(startDate)"
+                      @click="$refs.startMenu.save(options.startDate)"
                     >
                       OK
                     </v-btn>
@@ -46,14 +46,14 @@
                   ref="endMenu"
                   v-model="endMenu"
                   :close-on-content-click="false"
-                  :return-value.sync="endDate"
+                  :return-value.sync="options.endDate"
                   transition="scale-transition"
                   offset-y
                   min-width="auto"
                 >
                   <template v-slot:activator="{ on, attrs }">
                     <v-text-field
-                      v-model="endDate"
+                      v-model="options.endDate"
                       readonly
                       v-bind="attrs"
                       v-on="on"
@@ -62,7 +62,7 @@
                       append-icon=" mdi-calendar-blank"
                     ></v-text-field>
                   </template>
-                  <v-date-picker v-model="endDate" no-title scrollable>
+                  <v-date-picker v-model="options.endDate" no-title scrollable>
                     <v-spacer></v-spacer>
                     <v-btn text color="primary" @click="endMenu = false">
                       Cancel
@@ -70,7 +70,7 @@
                     <v-btn
                       text
                       color="primary"
-                      @click="$refs.endMenu.save(endDate)"
+                      @click="$refs.endMenu.save(options.endDate)"
                     >
                       OK
                     </v-btn>
@@ -85,7 +85,7 @@
                 <v-select
                   prefix="Adults:"
                   :items="[1,2,3,4,5,6,7,8,9]"
-                  v-model="adults"
+                  v-model="options.adults"
                   flat
                   solo
                 >
@@ -98,7 +98,7 @@
                 <v-select
                   prefix="Children: "
                   :items="[0,1,2,3,4,5,6,7,8,9]"
-                  v-model="children"
+                  v-model="options.children"
                   flat
                   solo
                 >
@@ -111,24 +111,36 @@
           </v-col>
         </v-row>
       </v-col>
-      <v-col cols=12 lg="3" id="button-col">
-          <v-btn large class="button white--text" color="#0464B4">Modify</v-btn>
+      <v-col cols=12 md="6" offset-md="3" lg="3" id="button-col">
+          <v-btn large class="button white--text" color="#0464B4" @click="modify()">Modify</v-btn>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name: "Banner",
   data: () => ({
-    startDate: new Date().toISOString().substr(0, 10),
-    endDate: new Date().toISOString().substr(0, 10),
-    adults: 1,
-    children: 0,
+    options: {
+      startDate: new Date().toISOString().substr(0, 10),
+      endDate: new Date().toISOString().substr(0, 10),
+      adults: 1,
+      children: 0,
+    },
     startMenu: false,
     endMenu: false,
   }),
+  methods: {
+    ...mapActions([
+      'update'
+    ]),
+
+    modify() {
+      this.$store.dispatch('update', this.options)
+    }
+  }
 };
 </script>
 

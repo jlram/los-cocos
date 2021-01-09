@@ -4,8 +4,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html, body {
-    overflow-x: hidden;
+#app {
+    overflow: hidden;
+    padding-bottom: 300px;
+}
+
+h1,h2,h3,h4,span {
+    color: #4C4C4C;
+}
+
+h3 {
+    font-size: 16px !important;
 }
 
 /* Navbar component */
@@ -13,6 +22,8 @@ html, body {
     box-shadow: none;
     background-color: white;
     position: fixed;
+    z-index: 9;
+    height: 68px;
 }
   
 #nav {
@@ -73,6 +84,10 @@ html, body {
 @media screen and (max-width: 1264px) {
     #nav {
        display: none;
+    }
+
+    #app-bar {
+        z-index: 0;
     }
 
     .v-app-bar__nav-icon, #logo-mobile {
@@ -141,7 +156,7 @@ html, body {
     height: 60px;
 
     font-weight: 400;
-    color: black;
+    color: #4C4C4C;
     font-size: 16px;
     padding-left: 5%;
     font-family: 'Montserrat';
@@ -182,10 +197,114 @@ html, body {
     }
 
     #button-col {
-        margin-left: 0;
+        margin-left: 25%;
     }
 
     .button {
         min-width: 100% !important;
     }
+}
+
+@media screen and (max-width: 960px) {
+    #button-col {
+        margin-left: 0%;
+    }
+}
+
+/* Main component */
+#main {
+    position: relative;
+    top: 120px;
+}
+
+#rooms {
+    position: relative;
+    top: 41px;
+}
+
+.headliner {
+    font-family: 'Quicksand', sans-serif !important;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.subheadliner {
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 400;
+    font-size: 16px;
+    margin-top: 15px !important;
+    margin-bottom: 15px !important;
+}
+
+.save-button {
+    height: 70px !important;
+    margin-top: 40px;
+}
+
+.header-card {
+    font-size: 26px;
+}
+
+.subheader-card {
+    font-size: 22px;
+}
+
+.room-card {
+    cursor: pointer;
+    width: 95%;
+}
+
+.img-card {
+    height: 90%;
+    position: relative;
+    top: 5%;
+    right: 50px;
+    z-index: 0;
+}
+
+.coco-straw {
+    position: relative;
+    top: 12px;
+    left: 70px;
+}
+
+@media screen and (max-width: 1904px) {
+    .img-card {
+        right: 120px;
+    }
+
+    .coco-straw {
+        left: -20px;
+    }
+}
+
+@media screen and (max-width: 1264px) {
+    .room-card {
+        width: 100%;
+    }
+    
+    .img-card {
+        width: 100%;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    #stepper {
+        width: 100%;    
+    }
+}
+
+/* Footer component */
+.footer {
+    width: 100%;
+    border-top: 1px solid rgb(185, 185, 185);
+    position: absolute;
+    bottom: -250px;
+}
+
+#logo-footer {
+    position: relative;
+    top: 20px;
+    left: 30px;
 }

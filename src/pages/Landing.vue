@@ -3,6 +3,8 @@
     <Navbar />
     <Drawer />
     <Banner />
+    <Main />
+    <Footer />
   </div>
 </template>
 
@@ -10,6 +12,8 @@
 import Navbar from "@/components/Navbar.vue";
 import Drawer from "@/components/Drawer.vue";
 import Banner from "@/components/Banner.vue";
+import Main from "@/components/Main.vue";
+import Footer from "@/components/Footer.vue";
 export default {
   name: "Landing",
   props: {
@@ -19,6 +23,8 @@ export default {
     Navbar,
     Drawer,
     Banner,
+    Main,
+    Footer
   },
 };
 </script>
