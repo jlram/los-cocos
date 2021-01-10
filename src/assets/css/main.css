@@ -67,34 +67,6 @@ h3 {
     margin: 15px;
 }
 
-@media screen and (max-width: 1600px) {
-    #nav {
-        margin-right: 200px;
-        margin-left: 200px;
-    }
-}
-
-@media screen and (max-width: 1350px) {
-    #nav {
-        margin-right: 100px;
-        margin-left: 100px;
-    }
-}
-
-@media screen and (max-width: 1264px) {
-    #nav {
-       display: none;
-    }
-
-    #app-bar {
-        z-index: 0;
-    }
-
-    .v-app-bar__nav-icon, #logo-mobile {
-        display: block !important;
-    }
-}
-
 /* Drawer component */
 #drawer {
     height: 30px;
@@ -105,15 +77,6 @@ h3 {
     position: absolute;
     top: 20px;
     left: 20px;
-}
-
-@media screen and (max-width: 1264px) {
-    #logo-mobile {
-        margin: auto;
-        position: relative;
-        right: 5px;
-        top: 20px;
-    }
 }
 
 .v-list-item {
@@ -187,30 +150,6 @@ h3 {
     font-size: 20px;
 }
 
-@media screen and (max-width: 1264px) {
-    #banner {
-        height: 500px;
-    }
-
-    #blue-row {
-        height: 85%;
-    }
-
-    #button-col {
-        margin-left: 25%;
-    }
-
-    .button {
-        min-width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 960px) {
-    #button-col {
-        margin-left: 0%;
-    }
-}
-
 /* Main component */
 #main {
     position: relative;
@@ -278,7 +217,24 @@ h3 {
     left: 70px;
 }
 
+/* Footer component */
+.footer {
+    width: 100%;
+    border-top: 1px solid rgb(185, 185, 185);
+    position: absolute;
+    bottom: -250px;
+}
+
+#logo-footer {
+    position: relative;
+    top: 20px;
+    left: 30px;
+}
+
+/* responsiveness */
+
 @media screen and (max-width: 1904px) {
+    /* main & rooms */
     .img-card {
         right: 120px;
     }
@@ -288,7 +244,62 @@ h3 {
     }
 }
 
+@media screen and (max-width: 1600px) {
+    /* navbar */
+    #nav {
+        margin-right: 200px;
+        margin-left: 200px;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    /* navbar */
+    #nav {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+}
+
 @media screen and (max-width: 1264px) {
+    /* navbar */
+    #nav {
+       display: none;
+    }
+
+    #app-bar {
+        z-index: 0;
+    }
+
+    .v-app-bar__nav-icon, #logo-mobile {
+        display: block !important;
+    }
+
+    /* drawer */
+    #logo-mobile {
+        margin: auto;
+        position: relative;
+        right: 5px;
+        top: 20px;
+    }
+
+    /* banner */
+    #banner {
+        height: 500px;
+    }
+
+    #blue-row {
+        height: 85%;
+    }
+
+    #button-col {
+        margin-left: 25%;
+    }
+
+    .button {
+        min-width: 100% !important;
+    }
+
+    /* main & rooms*/
     .room-card {
         width: 100%;
     }
@@ -309,21 +320,13 @@ h3 {
 }
 
 @media screen and (max-width: 960px) {
+    /* banner */
+    #button-col {
+        margin-left: 0%;
+    }
+
+    /* main & rooms */
     #stepper {
         width: 100%;    
     }
-}
-
-/* Footer component */
-.footer {
-    width: 100%;
-    border-top: 1px solid rgb(185, 185, 185);
-    position: absolute;
-    bottom: -250px;
-}
-
-#logo-footer {
-    position: relative;
-    top: 20px;
-    left: 30px;
 }
