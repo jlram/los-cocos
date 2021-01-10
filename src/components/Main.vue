@@ -62,7 +62,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col cols="12" md="6" offset-md="3">
+            <v-col cols="12" md="6" lg="12" offset-md="3" offset-lg="0">
               <v-btn
                 large
                 class="col-10 offset-1 save-button white--text mb-5"
