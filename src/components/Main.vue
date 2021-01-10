@@ -30,7 +30,7 @@
           <v-row class="mt-3">
             <v-col cols="12">
               <h3>Reservation date</h3>
-              <span>From {{ booking.startDate }} until {{ booking.endDate }}</span>
+              <span v-if="booking.startDate && booking.endDate">From {{ booking.startDate }} until {{ booking.endDate }}</span>
             </v-col>
           </v-row>
           <v-row class="mt-3 pb-5">
@@ -48,7 +48,7 @@
             </v-col>
             <v-col cols="3" offset="6">
               <h2 class="subheader-ticket">€
-                {{ (booking.room.price * booking.adults) + (booking.room.price * booking.children * 0.5) }}
+                {{ totalPrice }}
                 </h2>
             </v-col>
           </v-row>
@@ -77,7 +77,15 @@ export default {
   components: {
     Rooms,
   },
-  computed: mapState(['booking']),
+  computed: {
+    ...mapState(['booking']),
+    totalPrice: function () {
+      var startDate = new Date(this.booking.startDate)
+      var endDate = new Date(this.booking.endDate)
+      var diff = (endDate - startDate)  / (1000 * 60 * 60 * 24)
+      return ((this.booking.room.price * this.booking.adults) + (this.booking.room.price * this.booking.children * 0.5)) * diff
+    }
+  },
   methods: {
     save() {
       this.$store.dispatch('save')

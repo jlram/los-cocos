@@ -10,8 +10,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
   state: {
     booking: {
-      startDate: new Date().toISOString().substr(0, 10),
-      endDate: new Date().toISOString().substr(0, 10),
+      startDate: null,
+      endDate: null,
       adults: 1,
       children: 0,
       room: {
