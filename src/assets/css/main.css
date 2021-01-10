@@ -217,20 +217,6 @@ h3 {
     left: 70px;
 }
 
-/* Footer component */
-.footer {
-    width: 100%;
-    border-top: 1px solid rgb(185, 185, 185);
-    position: absolute;
-    bottom: -250px;
-}
-
-#logo-footer {
-    position: relative;
-    top: 20px;
-    left: 30px;
-}
-
 /* responsiveness */
 
 @media screen and (max-width: 1904px) {
