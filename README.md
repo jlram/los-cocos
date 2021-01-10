@@ -1,24 +1,26 @@
 # los-cocos
 
 ## Project setup
+
+### Install dependencies
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run project
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Browse to
 ```
-npm run build
+localhost:8080
+```
+or optionally, use `promo_code` param:
+```
+localhost:8080?promo_code=10
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
