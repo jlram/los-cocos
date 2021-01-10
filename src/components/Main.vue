@@ -54,8 +54,8 @@
             <v-col cols="3">
               <h2 class="subheader-ticket">Total</h2>
             </v-col>
-            <v-col cols="3" offset="6">
-              <h2 class="subheader-ticket">
+            <v-col cols="3" lg="6" offset="6" offset-lg="3">
+              <h2 class="subheader-ticket float-right">
                 €
                 {{ totalPrice }}
               </h2>

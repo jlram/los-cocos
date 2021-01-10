@@ -242,6 +242,10 @@ h3 {
     .coco-straw {
         left: -20px;
     }
+
+    #room-price {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 1600px) {
@@ -249,6 +253,14 @@ h3 {
     #nav {
         margin-right: 200px;
         margin-left: 200px;
+    }
+
+    .v-text-field__slot, .v-select__slot {
+        font-size: 14px;
+    }
+
+    #button-col {
+        margin-left: -30px;
     }
 }
 
