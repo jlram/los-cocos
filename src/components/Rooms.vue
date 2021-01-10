@@ -4,7 +4,7 @@
         <v-card
           v-for="room in roomList"
           :key="room.id"
-          :elevation="selectedRoom == room ? 6 : 0"
+          :elevation="selectedRoom == room ? 10 : 0"
           outlined
           class="rounded-0 pa-2 room-card"
           @click="selectRoom(room)"
