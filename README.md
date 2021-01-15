@@ -1,5 +1,9 @@
 # los-cocos
 
+## Quick preview
+
+<img src="sample.gif"/>
+
 ## Project setup
 
 ### Install dependencies
